@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content" method="upgrade">
+	<name>Content - Extra fields</name>
+	<author>Hendrix Web</author>
+	<creationDate>November 2015</creationDate>
+	<copyright>Copyright (C) 2015 Hendrix Web. All rights reserved.</copyright>
+	<licence>GNU General Public License version 2 or later; see LICENSE.txt</licence>
+	<authorEmail>michael@hendrixweb.net</authorEmail>
+	<authorUrl>www.hendrixweb.net</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_CONTENT_EXTRAFIELDS_XML_DESCRIPTION</description>
+	
+	<scriptfile>install.plg_content_extrafields.php</scriptfile>
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	
+	<files>
+		<filename plugin="extrafields">extrafields.php</filename>
+		<filename>index.html</filename>
+		<filename>LICENSE</filename>
+		<folder>forms</folder>
+		<folder>language</folder>
+		<folder>sql</folder>
+	</files>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_content_extrafields.ini</language>
+		<language tag="en-GB">en-GB.plg_content_extrafields.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			
+			<fieldset name="basic">
+				
+			</fieldset>
+			
+		</fields>
+	</config>
+</extension>
